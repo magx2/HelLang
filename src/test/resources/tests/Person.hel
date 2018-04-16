@@ -1,0 +1,16 @@
+module /tests [1.2.3-SNAPSHOT]
+
+import /hel/collections/List [4.5.x]
+
+export struct Person {
+	name: String [
+		notEmpty, startWithCapitalLetter
+	]
+	titles: String[]
+	titles2: /test/new/String[]
+	foo: /smt/other/String
+}
+
+fun startWithCapitalLetter(string: String): Boolean {
+	return true
+}

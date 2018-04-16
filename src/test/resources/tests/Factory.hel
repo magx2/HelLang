@@ -1,0 +1,9 @@
+module /tests
+
+import /tests/Person
+
+export class Factory(number: int32) {
+	fun newPerson(name: String): Person {
+		return new Person(name, [])
+	}
+}
